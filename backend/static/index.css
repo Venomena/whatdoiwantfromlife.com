@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.bg-dark-bg {
+  background-color: #0d1117;
+}
+
+.glass {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+#log-box, #results-box {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#log-box.show, #results-box.show {
+  opacity: 1;
+  transform: scale(1);
+}

@@ -79,7 +79,7 @@ const Conversation: React.FC = () => {
   const router = useRouter();
 
   useEffect(() => {
-    fetch('/api/start')
+    fetch('http://107.172.72.236:5000/start')
       .then(response => response.json())
       .then(data => {
         setMessages([data]);
@@ -91,7 +91,7 @@ const Conversation: React.FC = () => {
     setMessages([...messages, { user: userResponse }]);
     setInput('');
 
-    const response = await fetch('/api/respond', {
+    const response = await fetch('http://107.172.72.236:5000/respond', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
